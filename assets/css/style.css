@@ -577,3 +577,218 @@ footer span { color: var(--purple); }
   .about-img-wrap { width: 100%; height: 220px; }
   #project, #blog, #contact { padding: 80px 24px; }
 }
+
+/* =========================================
+   GLOBAL SAFETY
+========================================= */
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Container helper (optional but recommended) */
+.section-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+
+/* =========================================
+   NAVBAR MOBILE FIX
+========================================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+
+  nav {
+    padding: 18px 24px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #111;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    width: 220px;
+    gap: 20px;
+    display: none;
+    border-left: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .btn-contact {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* =========================================
+   HERO MOBILE FIX
+========================================= */
+
+@media (max-width: 768px) {
+
+  #home {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 140px 24px 100px;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-bio {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-blob,
+  .hero-photo,
+  .deco-plus,
+  .deco-circle {
+    display: none;
+  }
+
+  .hero-social {
+    position: static;
+    margin-top: 40px;
+    justify-content: center;
+  }
+}
+
+
+/* =========================================
+   ABOUT MOBILE FIX
+========================================= */
+
+@media (max-width: 900px) {
+
+  #about {
+    padding: 80px 24px;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .about-img-wrap {
+    width: 100%;
+    height: 260px;
+  }
+
+  .skills-row {
+    justify-content: center;
+  }
+}
+
+
+/* =========================================
+   GRID FIX (PROJECT + BLOG)
+========================================= */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+
+/* =========================================
+   SECTIONS PADDING ADJUSTMENT
+========================================= */
+
+@media (max-width: 768px) {
+
+  #project,
+  #blog,
+  #contact {
+    padding: 80px 24px;
+  }
+}
+
+
+/* =========================================
+   CONTACT FIX
+========================================= */
+
+@media (max-width: 768px) {
+
+  .contact-links {
+    align-items: stretch;
+  }
+
+  .contact-links a {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+
+/* =========================================
+   SMALL DEVICE SAFETY (≤ 400px)
+========================================= */
+
+@media (max-width: 400px) {
+
+  .hero-name {
+    font-size: 2rem;
+  }
+
+  .section-header h2,
+  #contact h2,
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+}
